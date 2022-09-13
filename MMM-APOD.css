@@ -12,14 +12,14 @@
 }
 
 MMM-APOD .image {
-  margin-right:5px;
+  margin-right:1em;
   float:left;
   max-width:50vw;
   max-height:150vh;
 }
 
 .MMM-APOD .copyright {
-  color: var(--color-text-dimmed);
+  font-size:smaller;
 }
 
 .MMM-APOD .description {
