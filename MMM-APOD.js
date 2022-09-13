@@ -63,27 +63,11 @@ Module.register("MMM-APOD",{
 			return wrapper;
 		}
 
-		if(this.config.showTitle) {
-			var apodTitle = document.createElement('div');
-			apodTitle.className = "dimmed light small";
-			apodTitle.innerHTML = this.title;
-			wrapper.appendChild(apodTitle);
-		}
+
 
 		if (this.type === "image") {
 			var apodImage = document.createElement('img');
-
-			var styleString = '';
-			if (this.config.maxMediaWidth != 0) {
-				styleString += 'max-width: ' + this.config.maxMediaWidth + 'px;';
-			}
-			if (this.config.maxMediaHeight != 0) {
-				styleString += 'max-height: ' + this.config.maxMediaHeight + 'px;';
-			}
-			if (styleString != '') {
-				apodImage.style = styleString;
-			}
-
+			apodImage.className = "image";
 			apodImage.src = this.url;
 			apodImage.alt = this.title;
 
@@ -109,24 +93,26 @@ Module.register("MMM-APOD",{
 			Log.error(this.name + ": Type of media unknown (not image or video).");
 			return;
 		}
+		
+		if(this.config.showTitle) {
+			var apodTitle = document.createElement('div');
+			apodTitle.className = "title";
+			apodTitle.innerHTML = this.title;
+			wrapper.appendChild(apodTitle);
+		}
 
 		if(this.copyright != "" && typeof this.copyright !== "undefined") {
 			var apodCopyright = document.createElement('div');
-
-			apodCopyright.className = "dimmed thin xsmall";
+			apodCopyright.className = "copyright";
 			apodCopyright.innerHTML = "&copy; " + this.copyright;
-
 			wrapper.appendChild(apodCopyright);
 		}
 
 		if(this.config.showDescription) {
 			var apodDescription = document.createElement('div');
+			apodDescription.className = "description";
 
-			apodDescription.className = "dimmed light xsmall description";
-
-			if (this.config.maxMediaWidth != 0) {
-				apodDescription.style = 'max-width: ' + this.config.maxMediaWidth + 'px;';
-			} else if (this.type === "video") {
+			if (this.type === "video") {
 				apodDescription.style = 'max-width: 960px;';
 			}
 
