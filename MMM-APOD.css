@@ -3,7 +3,6 @@
   }
   
 .MMM-APOD .module-content {
-
 }  
 
 .MMM-APOD .title {
@@ -11,7 +10,7 @@
  font-weight: bold;
 }
 
-MMM-APOD .image {
+.MMM-APOD .image {
   margin-right:1em;
   float:left;
   max-width:50vw;
@@ -26,56 +25,3 @@ MMM-APOD .image {
   margin: auto;
   text-align: -webkit-left;
 }
-
-.MMM-APOD .footer {
-    text-align:right;
-  }
-  .MMM-APOD .footer .sourceName,
-  .MMM-APOD .footer .publishedAt,
-  .MMM-APOD .footer .author {
-    font-size:80%;
-    text-align:right;
-    display:inline-block;
-  }
-  
-  .MMM-APOD .footer .sourceName {
-    text-transform: uppercase;
-  }
-  
-  /* custom className */
-  .MMM-APOD .redTitle .title {
-    color:#F99;
-  }
-  
-  /* Type: Horizontal */
-  .MMM-APOD.horizontal {
-    width:100%;
-  }
-  
-  .MMM-APOD.horizontal .content {
-    text-align:center;
-  }
-  
-
-  
-.MMM-APOD.horizontal .description {}
-    
-  
-/* Type: Vertical */
-  .MMM-APOD.vertical {
-    font-size: calc(2vh);
-    width:400px;
-  }
-  
-  .MMM-APOD.vertical .content .image {
-    max-width:400px;
-    max-height:300px;
-    margin-left:auto;
-    margin-right:auto;
-    display:block;
-  }
-  
-  .MMM-APOD.vertical .MMM-APOD_CONTENT {
-    padding-bottom:5px;
-  }
-
